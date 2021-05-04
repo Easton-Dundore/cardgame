@@ -94,7 +94,7 @@ def total_score(list1, list2):
             print ('Player one has a total score of ' + (str(three)) + ',' + 'and player two has ' + (str(four)) + ' player one wins!!!')
         elif four > three:
             print ('Player two has a total score of ' + (str(four)) + ',' + 'and player one has ' + (str(three)) + ' player two wins!!!')
-        elif three == four:
+        else:
             print ('Both players have the same total number, it is a tie!!!')
 
     
