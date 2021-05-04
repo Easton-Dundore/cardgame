@@ -85,9 +85,9 @@ def total_score(list1, list2):
             print ('Player two has a total score of ' + (str(four)) + ',' + 'and player one has ' + (str(three)) + ' player two wins!!!')
     
     elif v11 == v12:
-        print (' Player one wins!')
+        print (' Player one has equal cards, they win!')
     elif v21 == v22:
-        print (' Player two wins!')
+        print (' Player two has equal cards, they win!')
 
     else:
         if three > four:
