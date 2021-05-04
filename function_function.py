@@ -139,7 +139,7 @@ hand_two = player_two.return_cards()
 #print(hand_one)
 #print(hand_two)
 print(compare_two_lists(hand_one, hand_two))
-print(total_score(hand_one, hand_two))
+(total_score(hand_one, hand_two))
 
 # winner = compare_hands(hand_one, hand_two)
 
