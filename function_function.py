@@ -71,6 +71,7 @@ class Player:
         return 'Player: {} - [{}]'.format(self.name, ','.join([str(x) for x in self.cards]))
 
 
+
 def total_score(list1, list2):
     v11 = list1[0].value
     v12 = list1[1].value
@@ -85,9 +86,9 @@ def total_score(list1, list2):
             print ('Player two has a total score of ' + (str(four)) + ',' + 'and player one has ' + (str(three)) + ' player two wins!!!')
     
     elif v11 == v12:
-        print (' Player one has equal cards, they win!')
+        print ('Player one has equal cards, they win!')
     elif v21 == v22:
-        print (' Player two has equal cards, they win!')
+        print ('Player two has equal cards, they win!')
 
     else:
         if three > four:
@@ -114,7 +115,7 @@ def compare_two_lists(list1, list2):
     hv1 = max(v11, v12)
     hv2 = max(v21, v22)
     print('highest card in list 1 has value ' + str(hv1))
-    print(' The highest card in list 2 has value ' + str(hv2))
+    print('The highest card in list 2 has value ' + str(hv2))
     retlist = []
     if n1 > n2:
         print('list 1 has more elements (' + str(n1) + ') than list 2 (' + str(n2) + ')')
@@ -126,11 +127,22 @@ def compare_two_lists(list1, list2):
         print('list 1 has the same number of elements (' + str(n1) + ') as list 2')
         retlist = list1
     return retlist
-
-
+'''
+def check_one_pairs(hand):
+    values = [i[0] for i in hand]
+    value_counts = defaultdict(lambda:0)
+    for v in values:
+        value_counts[v]+=1
+    if 2 in value_counts.values():
+        return True
+    else:
+        return False
+'''
+name1 = input('Enter the name of player one: ')
+name2 = input('Enter the name of player two: ')
 deck_of_cards = Deck()
-player_one = Player("John")
-player_two = Player("Harrry")
+player_one = Player(name1)
+player_two = Player(name2)
 new_game = Game([player_one, player_two], deck_of_cards)
 new_game.deal()
 print(player_one, player_two)
@@ -138,7 +150,7 @@ hand_one = player_one.return_cards()
 hand_two = player_two.return_cards()
 #print(hand_one)
 #print(hand_two)
-print(compare_two_lists(hand_one, hand_two))
+#print(compare_two_lists(hand_one, hand_two))
 (total_score(hand_one, hand_two))
 
 # winner = compare_hands(hand_one, hand_two)
